@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup page with html css and JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="popup-container">
+        <button type="button" value="submit" class="submit-btn" onclick="openPopup()">Submit</button>
+        <div class="popup" id="popup">
+            <img src="https://www.freepnglogos.com/uploads/tick-png/check-mark-tick-vector-graphic-21.png" alt="">
+            <h2>Thank You!</h2>
+            <p> Your details has been submited successfully. <br> Thanks!</p>
+            <button type="button" value="ok" class="ok-btn" onclick="closePopup()">Ok</button>
+        </div>
+    </div>
+
+    <script>
+        let popupEl = document.getElementById('popup');
+
+        function openPopup(){
+            popupEl.classList.add('open-popup')
+        }
+        function closePopup(){
+            popupEl.classList.remove('open-popup')
+            alert('Thank you!')
+        }
+    </script>
+</body>
+</html>
